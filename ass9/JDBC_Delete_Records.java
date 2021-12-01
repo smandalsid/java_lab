@@ -10,13 +10,21 @@ public class JDBC_Delete_Records {
             Connection myConnection = DriverManager.getConnection(url,user, password);
             Statement myStatement = myConnection.createStatement();
 
-            String sql = "delete from student where city='Gujarat'";
+            String sql = "select * from student";
+            ResultSet myResultSet = myStatement.executeQuery(sql);
+            System.out.println("\nRecords in the student table");
+            while(myResultSet.next())
+            {
+                System.out.println("Student name: "+myResultSet.getString("name")+" Age: "+myResultSet.getString("age")+" Gender: "+myResultSet.getString("gender")+" City: "+myResultSet.getString("city")+" DOB: "+myResultSet.getString("dob"));
+            }
+
+            sql = "delete from student where name='studenti'";
             myStatement.executeUpdate(sql);
 
             System.out.println("After deleting records");
             sql = "select * from student";
-            ResultSet myResultSet = myStatement.executeQuery(sql);
-            System.out.println("\nRecords in the updated table");
+            myResultSet = myStatement.executeQuery(sql);
+            System.out.println("\nRecords in the student table");
             while(myResultSet.next())
             {
                 System.out.println("Student name: "+myResultSet.getString("name")+" Age: "+myResultSet.getString("age")+" Gender: "+myResultSet.getString("gender")+" City: "+myResultSet.getString("city")+" DOB: "+myResultSet.getString("dob"));

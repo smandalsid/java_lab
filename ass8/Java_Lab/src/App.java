@@ -62,7 +62,7 @@ public class App extends Application {
             pagesmenu.getItems().addAll(pagesmenu1, pagesmenu2, pagesmenu3);
             menubar.getMenus().addAll(pagesmenu, moremenu);
 
-            grid.add(scroll1, 3, 1, 1, 8);
+            grid.add(scroll1, 3, 0, 1, 10);
             grid.add(scroll2, 0, 9, 2, 1);
             grid.setAlignment(Pos.CENTER);
             grid.setHgap(10);
@@ -139,8 +139,8 @@ public class App extends Application {
                 }
             });
 
-            Scene scene = new Scene(grid, 600, 500);
-            primarystage.setScene(scene);
+            Scene scene1 = new Scene(grid, 395, 330);
+            primarystage.setScene(scene1);
 
             primarystage.show();
 

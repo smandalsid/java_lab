@@ -18,7 +18,7 @@ public class JDBC_Update_Records {
                 System.out.println("Student name: "+myResultSet.getString("name")+" Age: "+myResultSet.getString("age")+" Gender: "+myResultSet.getString("gender")+" City: "+myResultSet.getString("city")+" DOB: "+myResultSet.getString("dob"));
             }
             
-            sql = "update student set city='Gujarat' where city='Lucknow'";
+            sql = "update student set city='Haryana' where city in ('Chandigarh', 'Gujarat')";
             myStatement.executeUpdate(sql);
             sql = "select * from student";
             myResultSet = myStatement.executeQuery(sql);
