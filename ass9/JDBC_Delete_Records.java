@@ -6,7 +6,7 @@ public class JDBC_Delete_Records {
         {
             String url = "jdbc:mysql://localhost:3306/java";
             String user = "siddharth";
-            String password = "Chunnu@1";
+            String password = "";
             Connection myConnection = DriverManager.getConnection(url,user, password);
             Statement myStatement = myConnection.createStatement();
 

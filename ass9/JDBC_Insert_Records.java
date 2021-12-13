@@ -6,7 +6,7 @@ public class JDBC_Insert_Records {
         {
             String dburl = "jdbc:mysql://localhost:3306/java";
             String username = "siddharth";
-            String password = "Chunnu@1";
+            String password = "";
             Connection myConnection = DriverManager.getConnection(dburl, username, password);
             Statement mysStatement = myConnection.createStatement();
             System.out.println("Inserting records in the table\n");
